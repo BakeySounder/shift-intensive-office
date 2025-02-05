@@ -9,8 +9,8 @@ import java.math.BigDecimal;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class AddEmployeeDTO {
-//    public Long id;
+public class GetEmployeeDTO {
+    public Long id;
     public String name;
     public BigDecimal salary;
     public String department;
