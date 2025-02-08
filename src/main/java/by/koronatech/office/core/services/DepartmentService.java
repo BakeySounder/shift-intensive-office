@@ -1,7 +1,7 @@
 package by.koronatech.office.core.services;
 
 import by.koronatech.office.api.controller.dto.GetDepartmentDTO;
-import by.koronatech.office.core.mapper.department.GetDepartmentMapper;
+import by.koronatech.office.core.utils.mapper.department.GetDepartmentMapper;
 import by.koronatech.office.core.repositories.DepartmentRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.PageRequest;
