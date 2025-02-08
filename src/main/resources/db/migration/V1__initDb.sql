@@ -1,0 +1,11 @@
+CREATE TABLE employees (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(200) NOT NULL,
+    salary DECIMAL(19, 2) NOT NULL,
+    department VARCHAR(200) NOT NULL,
+    manager BOOLEAN NOT NULL
+);
+CREATE TABLE departments (
+    id BIGINT NOT NULL PRIMARY KEY,
+    name VARCHAR(200) NOT NULL
+);

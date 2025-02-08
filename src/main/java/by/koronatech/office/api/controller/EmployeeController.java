@@ -1,17 +1,14 @@
 package by.koronatech.office.api.controller;
 
 import by.koronatech.office.api.controller.dto.AddEmployeeDTO;
-import by.koronatech.office.api.controller.dto.GetDepartmentDTO;
 import by.koronatech.office.api.controller.dto.GetEmployeeDTO;
 import by.koronatech.office.core.exceptions.EmployeeNotFoundException;
 import by.koronatech.office.core.services.EmployeeService;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @ControllerAdvice
@@ -21,13 +18,17 @@ import java.util.List;
 public class EmployeeController {
 
     private final EmployeeService employeeService;
+
     @PostMapping
     public GetEmployeeDTO createEmployee(@RequestBody AddEmployeeDTO addEmployeeDTO) {
         return employeeService.createEmployee(addEmployeeDTO);
     }
+
     @GetMapping
-    public List<GetEmployeeDTO> findEmployeeInDepartment(@RequestParam String department, @RequestParam int from, @RequestParam int count) {
-        return employeeService.findEmployeeInDepartment(department, from, count);
+    public List<GetEmployeeDTO> findEmployeeInDepartment(@RequestParam String department,
+                                                         @RequestParam int page,
+                                                         @RequestParam int pageSize) {
+        return employeeService.findEmployeeInDepartment(department, page, pageSize);
     }
 
     @PatchMapping("/{employeeId}")
@@ -37,7 +38,7 @@ public class EmployeeController {
 
     @PutMapping("/{employeeId}")
     public GetEmployeeDTO updateEmployee(@PathVariable Long employeeId, @RequestBody AddEmployeeDTO employeeData) {
-        return employeeService.updateEmployee(employeeId,employeeData);
+        return employeeService.updateEmployee(employeeId, employeeData);
     }
 
     @DeleteMapping("/{employeeId}")
