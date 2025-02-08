@@ -1,10 +1,16 @@
-package by.koronatech.office.core.db.entities;
+package by.koronatech.office.core.entities;
 
-import jakarta.persistence.*;
-import lombok.*;
-
-import java.util.HashSet;
-import java.util.Set;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Getter
 @Setter
@@ -12,7 +18,7 @@ import java.util.Set;
 @AllArgsConstructor
 @Entity
 @Builder
-@Table(name = "department")
+@Table(name = "departments", schema = "office")
 public class DepartmentEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)

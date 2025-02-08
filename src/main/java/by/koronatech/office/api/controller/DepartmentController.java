@@ -19,8 +19,8 @@ public class DepartmentController {
     private final DepartmentService departmentService;
 
     @GetMapping
-    public List<GetDepartmentDTO> allDepartments(@RequestParam int from, @RequestParam int count) {
-        return departmentService.getAllDepartments(from, count);
+    public List<GetDepartmentDTO> allDepartments(@RequestParam int page, @RequestParam int pageSize) {
+        return departmentService.getAllDepartments(page, pageSize);
     }
 
 
