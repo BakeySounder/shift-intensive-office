@@ -2,7 +2,7 @@ package by.koronatech.office.api.controller;
 
 import by.koronatech.office.api.controller.dto.AddEmployeeDTO;
 import by.koronatech.office.api.controller.dto.GetEmployeeDTO;
-import by.koronatech.office.core.exceptions.EmployeeNotFoundException;
+import by.koronatech.office.core.utils.exceptions.EmployeeNotFoundException;
 import by.koronatech.office.core.services.EmployeeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

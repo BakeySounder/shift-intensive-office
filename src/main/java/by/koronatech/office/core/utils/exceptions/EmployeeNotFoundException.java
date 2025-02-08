@@ -1,4 +1,4 @@
-package by.koronatech.office.core.exceptions;
+package by.koronatech.office.core.utils.exceptions;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

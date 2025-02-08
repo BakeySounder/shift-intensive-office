@@ -1,8 +1,8 @@
-package by.koronatech.office.core.mapper.department;
+package by.koronatech.office.core.utils.mapper.department;
 
 import by.koronatech.office.api.controller.dto.GetDepartmentDTO;
 import by.koronatech.office.core.entities.DepartmentEntity;
-import by.koronatech.office.core.mapper.BaseMapper;
+import by.koronatech.office.core.utils.mapper.BaseMapper;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 

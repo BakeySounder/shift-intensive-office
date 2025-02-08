@@ -1,4 +1,4 @@
-package by.koronatech.office.core.mapper;
+package by.koronatech.office.core.utils.mapper;
 
 import org.mapstruct.*;
 
